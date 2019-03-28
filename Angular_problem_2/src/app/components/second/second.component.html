@@ -1,0 +1,31 @@
+<div class="container">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+    
+    <th><a class="btn btn-primary" (click)=sortbyId()>ID</a></th>
+    <th><a class="btn btn-primary" (click)=sortbyName()>Name</a></th>
+    <th><a class="btn btn-primary" (click)=sortbySal()>Salary</a></th>
+    <th><a class="btn btn-primary" (click)=sortbyDep()>Department</a></th>
+    
+    </thead>
+   
+    <tbody>
+      <tr *ngFor = "let token of userfile">
+        
+        <td>{{token.empId}}</td>
+        <td>{{token.empName}}</td>
+        <td>{{token.empSal}}</td>
+        <td>{{token.empDep}}</td>
+        <td>
+   
+      </tr>
+      <tr *ngIf ="(users? users.length==0:0)">
+        <th colspan="5">
+          <p class="text-right text-danger">
+            Sorry, No data available!
+          </p>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
